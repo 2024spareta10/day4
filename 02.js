@@ -12,7 +12,14 @@
  * @param {string} title
  * @returns {Array} 새로운 todos 배열
  */
-function createTodo(todos, title) {}
+function createTodo(todos, title) {
+    var newtodos = [...todos];
+    newtodos.push({ id: todos.length+1, title: title, completed: false });
+    return newtodos;
+}
+
+
+
 
 // export 수정 불가
 export { createTodo };
